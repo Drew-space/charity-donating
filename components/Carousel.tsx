@@ -43,21 +43,19 @@ const TestimonialsCarousel = () => {
                   />
                 </div>
 
-                {/* Text */}
                 <div className="flex flex-col justify-center gap-2 text-sm py-2">
                   <h2 className="text-[#202a10] text-lg font-bold">
                     {item.name}
                   </h2>
                   <p className="text-gray-500">{item.role}</p>
                   <div>{"⭐".repeat(item.rating)}</div>
-                  <p className="text-[#333] leading-7">{item.text}</p>
+                  <p className="text-[#333] ">{item.text}</p>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
 
-        {/* Buttons */}
         <div className="flex justify-end gap-2 mt-4">
           <CarouselPrevious className="static translate-y-0" />
           <CarouselNext className="static translate-y-0" />

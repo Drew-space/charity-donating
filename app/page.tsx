@@ -1,4 +1,6 @@
 import About from "@/components/About";
+import DonationBanner from "@/components/DonationBanner";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Ourwork from "@/components/Our-work";
@@ -13,6 +15,8 @@ export default function Home() {
       <About />
       <Ourwork />
       <Testimonials />
+      <DonationBanner />
+      <Footer />
     </>
   );
 }
