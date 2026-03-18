@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center justify-between gap-8">
             <h1>BlueSource</h1>
-            <div className="flex space-x-8">
+            <div className=" space-x-8  hidden md:flex">
               {navlink.map((link) => (
                 <div
                   className="flex items-center justify-between"
