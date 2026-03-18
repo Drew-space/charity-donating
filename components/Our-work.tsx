@@ -1,16 +1,11 @@
-
-
 import { PlayIcon } from "lucide-react";
 import React from "react";
 
 const Ourwork = () => {
   return (
     <section className="mt-20 mx-auto container px-4">
-   
       <div className="text-center md:text-left max-w-2xl mx-auto md:mx-0">
-        <button className="text-sm font-semibold text-blue-600">
-          Our Moments
-        </button>
+        <button className="text-sm font-semibold ">Our Moments</button>
 
         <h1
           className="my-4 font-bold leading-tight

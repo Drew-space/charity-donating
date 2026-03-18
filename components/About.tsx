@@ -15,9 +15,7 @@ const About = () => {
       {/* Top Section */}
       <div className="flex flex-col md:flex-row md:justify-between gap-8">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <button className="text-sm font-semibold text-blue-600">
-            Our Impact
-          </button>
+          <button className="text-sm font-semibold ">Our Impact</button>
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3">
             We are Making a Difference
           </h1>
@@ -47,7 +45,6 @@ const About = () => {
                 {item.text}
               </p>
             </div>
-
 
             {index !== numbers.length - 1 && (
               <Separator

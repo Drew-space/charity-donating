@@ -17,7 +17,6 @@ const Hero = () => {
       <div className="absolute inset-0 z-20 flex items-center">
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          
             <h1
               className="text-white font-bold leading-tight
               text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
@@ -35,8 +34,7 @@ const Hero = () => {
               villages in Nigeria by {new Date().getFullYear()}
             </p>
 
-           
-            <button className="mt-6 bg-[#5aaa3a] text-white px-6 py-2 rounded-full text-sm md:text-base font-semibold hover:bg-gray-200 transition">
+            <button className="mt-6 bg-[#5aaa3a] text-white px-6 py-2 rounded-full text-sm md:text-base font-semibold ">
               Donate now
             </button>
           </div>

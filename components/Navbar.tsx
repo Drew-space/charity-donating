@@ -12,10 +12,10 @@ const Navbar = () => {
       <div className="mx-auto container py-4">
         <div className="flex items-center justify-between px-5">
           <div className="flex items-center justify-between gap-8">
-            <h1 className="text-2xl  text-[#5aaa3a] tracking-tighter md:text-2xl">
+            <h1 className="text-2xl  text-[#5aaa3a] tracking-tighter md:text-2xl cursor-pointer ">
               HopeAlive
             </h1>
-            <div className=" space-x-8  hidden md:flex">
+            <div className=" space-x-8 cursor-pointer   hidden md:flex">
               {navlink.map((link) => (
                 <div
                   className="flex  items-center justify-between"
@@ -27,7 +27,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          <button className="bg-[#5aaa3a] text-white px-2 py-2 rounded-md">
+          <button className="bg-[#5aaa3a] cursor-pointer  text-white px-2 py-2 rounded-md">
             Donate Now
           </button>
         </div>
