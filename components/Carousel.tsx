@@ -27,14 +27,14 @@ const testimonials = [
 
 const TestimonialsCarousel = () => {
   return (
-    <section className="max-w-[900px] mx-auto px-10 py-8">
+    <section className="max-w-225 mx-auto px-10 py-8">
       <Carousel>
         <CarouselContent>
           {testimonials.map((item, index) => (
             <CarouselItem key={index}>
               <div className="flex flex-col sm:flex-row bg-[#f5f9eb] rounded-[20px] p-5 gap-5">
                 {/* Image */}
-                <div className="relative w-full sm:w-[280px] h-64 sm:h-auto flex-shrink-0 rounded-[16px] overflow-hidden">
+                <div className="relative w-full sm:w-70 h-64 sm:h-auto shrink-0 rounded-[16px] overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.name}
