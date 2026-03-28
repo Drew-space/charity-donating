@@ -15,12 +15,6 @@ const Footer = () => {
           </p>
 
           <DonateButton className="bg-white px-6  py-3 text-[#3d2b0e] w-fit  rounded-full" />
-          {/* <Link
-            href="/donate"
-            className="bg-white font-bold text-sm px-6 py-3 rounded-full w-fit hover:bg-gray-100 transition-colors"
-          >
-            Donate Now
-          </Link> */}
         </div>
 
         <div className="flex flex-col gap-4">
