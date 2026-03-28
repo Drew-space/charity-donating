@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import DonateButton from "./DonateButton";
 
 const Footer = () => {
   return (
@@ -12,12 +13,14 @@ const Footer = () => {
             Bring Clean Water to community in Need. It is our joy to see smiles
             on people&#39;s face. Support us today.
           </p>
-          <Link
+
+          <DonateButton className="bg-white px-6  py-3 text-[#3d2b0e] w-fit  rounded-full" />
+          {/* <Link
             href="/donate"
-            className="bg-white text-[#3d2b0e] font-bold text-sm px-6 py-3 rounded-full w-fit hover:bg-gray-100 transition-colors"
+            className="bg-white font-bold text-sm px-6 py-3 rounded-full w-fit hover:bg-gray-100 transition-colors"
           >
             Donate Now
-          </Link>
+          </Link> */}
         </div>
 
         <div className="flex flex-col gap-4">

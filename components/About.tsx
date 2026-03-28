@@ -1,5 +1,6 @@
 import React from "react";
 import { Separator } from "./ui/separator";
+import DonateButton from "./DonateButton";
 
 const About = () => {
   const numbers = [
@@ -21,16 +22,14 @@ const About = () => {
           </h1>
         </div>
 
-        <div className="text-center md:text-left">
-          <p className="text-sm sm:text-base text-gray-600 max-w-md">
+        <div className="text-center md:text-left ">
+          <p className="text-sm sm:text-base text-gray-600 max-w-md mb-4">
             With your support, we’re changing lives by bringing safe, clean
             water to communities that need it. Here is our journey so far and
             the impact made possible by your support.
           </p>
 
-          <button className="mt-4 bg-[#5aaa3a] text-white px-6 py-2 rounded-full text-sm ">
-            Donate Now
-          </button>
+          <DonateButton />
         </div>
       </div>
 

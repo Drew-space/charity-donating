@@ -22,66 +22,67 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { email } from "zod/v4-mini";
 import dynamic from "next/dynamic";
+import DonateButton from "./DonateButton";
 
-const schema = z.object({
-  email: z.string().email(),
-  name: z.string(),
-  phone: z.string().min(10),
-  amount: z.number().min(100),
-});
+// const schema = z.object({
+//   email: z.string().email(),
+//   name: z.string(),
+//   phone: z.string().min(10),
+//   amount: z.number().min(100),
+// });
 
-type formData = z.infer<typeof schema>;
-const PaystackButton = dynamic(
-  () => import("react-paystack").then((mod) => mod.PaystackButton),
-  { ssr: false },
-);
+// type formData = z.infer<typeof schema>;
+// const PaystackButton = dynamic(
+//   () => import("react-paystack").then((mod) => mod.PaystackButton),
+//   { ssr: false },
+// );
 
 const Hero = () => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
 
-  const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "";
+  // const publicKey = process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || "";
 
-  const {
-    register,
-    handleSubmit,
-    watch,
-    reset,
-    formState: { errors },
-  } = useForm<formData>({
-    resolver: zodResolver(schema),
-  });
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   watch,
+  //   reset,
+  //   formState: { errors },
+  // } = useForm<formData>({
+  //   resolver: zodResolver(schema),
+  // });
 
-  const email = watch("email");
-  const amount = watch("amount");
+  // const email = watch("email");
+  // const amount = watch("amount");
 
-  const componentProps = {
-    email,
-    amount: amount * 100,
-    publicKey,
-    currency: "NGN",
+  // const componentProps = {
+  //   email,
+  //   amount: amount * 100,
+  //   publicKey,
+  //   currency: "NGN",
 
-    metadata: {
-      custom_fields: [
-        {
-          display_name: "Email",
-          variable_name: "email",
-          value: email,
-        },
-        {
-          display_name: "Amount",
-          variable_name: "amount",
-          value: amount,
-        },
-      ],
-    },
+  //   metadata: {
+  //     custom_fields: [
+  //       {
+  //         display_name: "Email",
+  //         variable_name: "email",
+  //         value: email,
+  //       },
+  //       {
+  //         display_name: "Amount",
+  //         variable_name: "amount",
+  //         value: amount,
+  //       },
+  //     ],
+  //   },
 
-    text: "Donate",
-    onSuccess: () => {
-      setOpen(false);
-      alert("Thank you for donating");
-    },
-    onClose: () => alert("Are you sure you want to close"),
-  };
+  //   text: "Donate",
+  //   onSuccess: () => {
+  //     setOpen(false);
+  //     alert("Thank you for donating");
+  //   },
+  //   onClose: () => alert("Are you sure you want to close"),
+  // };
 
   return (
     <div className="relative w-full h-100 md:h-132.5">
@@ -109,13 +110,15 @@ const Hero = () => {
 
             <p
               className="text-white mt-4 font-medium
-              text-sm sm:text-base md:text-lg max-w-xl"
+              text-sm sm:text-base md:text-lg max-w-xl mb-4"
             >
               A community-driven effort to bring clean sustainable water to 100
               villages in Nigeria by {new Date().getFullYear()}
             </p>
 
-            <Dialog open={open} onOpenChange={setOpen}>
+            <DonateButton />
+
+            {/* <Dialog open={open} onOpenChange={setOpen}>
               <form>
                 <DialogTrigger asChild>
                   <button
@@ -183,7 +186,7 @@ const Hero = () => {
                   </DialogFooter>
                 </DialogContent>
               </form>
-            </Dialog>
+            </Dialog> */}
           </div>
         </div>
       </div>

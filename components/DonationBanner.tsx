@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import DonateButton from "./DonateButton";
 
 const DonationBanner = () => {
   return (
@@ -15,12 +16,7 @@ const DonationBanner = () => {
             facilities, empowers communities and gives children a healthy
             future.
           </p>
-          <Link
-            href="/donate"
-            className="bg-white text-[#202a10] font-bold text-sm px-8 py-4 rounded-full w-fit hover:bg-gray-100 transition-colors"
-          >
-            Donate Now
-          </Link>
+          <DonateButton className="bg-white px-4 py-2 rounded-full" />
         </div>
 
         <div className="relative sm:w-1/2 h-64 sm:h-auto">

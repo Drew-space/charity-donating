@@ -1,4 +1,5 @@
 import React from "react";
+import DonateButton from "./DonateButton";
 
 const Navbar = () => {
   const navlink = [
@@ -27,9 +28,11 @@ const Navbar = () => {
             </div>
           </div>
 
-          <button className="bg-[#5aaa3a] cursor-pointer  text-white px-2 py-2 rounded-md">
+          <DonateButton />
+
+          {/* <button className="bg-[#5aaa3a] cursor-pointer  text-white px-2 py-2 rounded-md">
             Donate Now
-          </button>
+          </button> */}
         </div>
       </div>
     </nav>
